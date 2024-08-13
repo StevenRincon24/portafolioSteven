@@ -1,0 +1,29 @@
+---
+import { date } from "astro/zod";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "2024-14-03 / 2024-13-07",
+    title: "Ingeniero de sistemas y computación",
+    description:
+      "Prestación de servicios de apoyo a la gestión para realizar actividades de caracterización de equipos tecnológicos con los que cuenta la alcaldía, mantenimiento preventivo y correctivo de los equipos de cómputo redes de datos manejo de software y asistencia en la aplicación de las políticas de gobierno en línea y soporte técnico en línea y soporte técnico en la actualización del portal web de las diferentes dependencias en la alcaldía del municipio de Nobsa.",
+  },
+  {
+    date: "2022-13-06 / 2024-31-07",
+    title: "Cientifico de datos",
+    description:
+      "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+  }
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 text-justify">
+  {
+    EXPERIENCE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

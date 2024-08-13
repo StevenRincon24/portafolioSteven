@@ -1,0 +1,119 @@
+---
+import IconoAstro from "../icons/IconoAstro.astro";
+import LogoReact from "../icons/LogoReact.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import LogoAngular from "../icons/LogoAngular.astro";
+import RatingStars from "./RatingStars.astro";
+import LogoNode from "../icons/LogoNode.astro";
+import LogoPython from "../icons/LogoPython.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import LogoRuby from "../icons/LogoRuby.astro";
+
+const habilidades = [
+  {
+    titulo: "React",
+    descripcion:
+      "Tengo manejo de sistemas de diseño, lo cual permite agilizar el proceso de diseño acortando los tiempos en la creación de las interfaces dentro del proyecto.",
+    icono: LogoReact,
+    rating: 5,
+  },
+  {
+    titulo: "Astro",
+    descripcion:
+      "Con mi experiencia en patrones de diseño responsive tengo una visión clara sobre cómo implementarlos de manera efectiva en cualquier proyecto.",
+    icono: IconoAstro,
+    rating: 4,
+  },
+  {
+    titulo: "Angular",
+    descripcion:
+      "Tengo manejo de sistemas de diseño, lo cual permite agilizar el proceso de diseño acortando los tiempos en la creación de las interfaces dentro del proyecto.",
+    icono: LogoAngular,
+    rating: 3,
+  },
+  {
+    titulo: "Tailwind",
+    descripcion:
+      "Tengo manejo de sistemas de diseño, lo cual permite agilizar el proceso de diseño acortando los tiempos en la creación de las interfaces dentro del proyecto.",
+    icono: Tailwind,
+    rating: 4,
+  },
+];
+
+const habilidadesProgramacion = [
+  {
+    titulo: "NodeJs",
+    descripcion:
+      "Tengo manejo de sistemas de diseño, lo cual permite agilizar el proceso de diseño acortando los tiempos en la creación de las interfaces dentro del proyecto.",
+    icono: LogoNode,
+    rating: 5,
+  },
+  {
+    titulo: "Python",
+    descripcion:
+      "Con mi experiencia en patrones de diseño responsive tengo una visión clara sobre cómo implementarlos de manera efectiva en cualquier proyecto.",
+    icono: LogoPython,
+    rating: 4,
+  },
+
+  {
+    titulo: "JavaScript",
+    descripcion:
+      "Tengo manejo de sistemas de diseño, lo cual permite agilizar el proceso de diseño acortando los tiempos en la creación de las interfaces dentro del proyecto.",
+    icono: JavaScript,
+    rating: 4,
+  },
+  ,
+  {
+    titulo: "Ruby",
+    descripcion:
+      "Tengo manejo de sistemas de diseño, lo cual permite agilizar el proceso de diseño acortando los tiempos en la creación de las interfaces dentro del proyecto.",
+    icono: LogoRuby,
+    rating: 3,
+  },
+];
+---
+
+<section class="flex flex-col items-center p-1 text-white">
+  <h3 class="text-2xl font-bold mt-1 text-[#47D16E]">
+    Lenguajes de programación
+  </h3>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-lg mt-4"
+  >
+    {
+      habilidadesProgramacion.map((habilidad) => (
+        <div class="bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] p-6 rounded-lg shadow-lg hover:border-teal-300 border border-transparent flex flex-col items-center">
+          <div class="flex flex-col items-center justify-center mb-4 ">
+            <habilidad.icono class="size-12" />
+
+            <RatingStars rating={habilidad.rating} />
+            {habilidad.titulo}
+          </div>
+          <h3 class="text-lg font-semibold text-teal-300 mb-2" />
+        </div>
+      ))
+    }
+  </div>
+
+  <h3 class="text-2xl font-bold mt-5 text-[#47D16E]">Frameworks de UI</h3>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-lg mt-4"
+  >
+    {
+      habilidades.map((habilidad) => (
+        <div class="bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] p-6 rounded-lg shadow-lg hover:border-teal-300 border border-transparent flex flex-col items-center">
+          <div class="flex flex-col items-center justify-center mb-4 ">
+            <habilidad.icono class="size-12" />
+
+            <RatingStars rating={habilidad.rating} />
+            {habilidad.titulo}
+          </div>
+          <h3 class="text-lg font-semibold text-teal-300 mb-2" />
+        </div>
+      ))
+    }
+  </div>
+</section>
