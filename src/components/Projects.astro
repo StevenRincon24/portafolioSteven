@@ -6,11 +6,24 @@ import GitHub from "../icons/GitHub.astro";
 import Socket from "../icons/Socket.astro";
 import LinkButton from "./LinkButton.astro";
 import Link from "./Link.astro";
+import Laravel from "../icons/Laravel.astro";
+import SQL from "../icons/SQL.astro";
+import LogoReact from "../icons/LogoReact.astro";
 const TAGS = {
   PYTHON: {
     name: "Python",
     class: "bg-white/80 text-black",
     icon: Python,
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#FF2D20] text-white",
+    icon: Laravel,
+  },
+  SQL: {
+    name: "SQL",
+    class: "bg-[#003159] text-white",
+    icon: SQL,
   },
   TAILWIND: {
     name: "Tailwind CSS",
@@ -27,14 +40,34 @@ const TAGS = {
     class: "bg-white text-black",
     icon: Socket,
   },
+  REACT: {
+    name: "React",
+    class: "bg-white text-black",
+    icon: LogoReact,
+  },
 };
 
 const PROJECTS = [
   {
+    title: "Mesa de ayuda",
+    description:
+      "Proyecto de sistema de tickets realizado con PHP Laravel y MySQL ",
+    link: "http://172.105.150.92/",
+    github: "https://github.com/ItsAiz/DamasProjectBack",
+    image: "/proyectos/Mesa_ayuda.png",
+    tags: [TAGS.LARAVEL, TAGS.SQL],
+  },
+  {
+    title: "II Carrera de la mujer Nobsa 2025",
+    description: "Página para la II Carrera de la mujer Nobsa 2025",
+    link: "https://carrera-mujer-nobsa.vercel.app/",
+    image: "/proyectos/CarreraMujer.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
     title: "Juego de damas",
     description:
       "Juego realizado con Python aplicando algoritmos de inteligencia artificial",
-    link: "#",
     github: "https://github.com/ItsAiz/DamasProjectBack",
     image: "/proyectos/Damas.png",
     tags: [TAGS.PYTHON, TAGS.JAVASCRIPT, TAGS.SOCKET],
@@ -43,7 +76,7 @@ const PROJECTS = [
     title: "Emprendimientos UPTC",
     description:
       "Aplicación web para la gestión de emprendimientos de la Universidad Pedagógica y Tecnológica de Colombia.",
-    link: "#",
+    link: "https://entrepreneurship-administration-front.vercel.app/",
     github: "https://github.com/ItsAiz/DamasProjectBack",
     image: "/proyectos/Emprendimientos.png",
     tags: [TAGS.JAVASCRIPT, TAGS.TAILWIND],
